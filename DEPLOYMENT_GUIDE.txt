@@ -1,0 +1,55 @@
+========================================
+STREAMLIT CLOUD DEPLOYMENT GUIDE
+========================================
+
+STEP 1: Push code to GitHub
+----------------------------
+Run: .\deploy_to_streamlit.bat
+
+Or manually:
+cd ..
+git add app.py requirements.txt
+git commit -m "Deploy CDR Analysis Pro"
+git push origin main
+
+
+STEP 2: Deploy on Streamlit Cloud
+----------------------------------
+1. Go to: https://share.streamlit.io/
+
+2. Sign in with GitHub account: Sneha-Suresh-git
+
+3. Click "New app" button (top right)
+
+4. Fill in the form:
+   - Repository: Sneha-Suresh-git/CDR-Sneha-
+   - Branch: main
+   - Main file path: app.py
+   - App URL (optional): cdr-analysis-pro (or leave blank)
+
+5. Click "Deploy!" button
+
+6. Wait 2-3 minutes for deployment
+
+
+STEP 3: Access your app
+------------------------
+Your app will be available at:
+https://[your-app-name].streamlit.app
+
+Example: https://cdr-analysis-pro.streamlit.app
+
+
+TROUBLESHOOTING:
+----------------
+- If "You do not have access" error appears:
+  * Make sure you're signed in with the correct GitHub account
+  * Check that the repository is public (not private)
+  * Try deleting the old app from Streamlit Cloud dashboard first
+  
+- If deployment fails:
+  * Check the logs in Streamlit Cloud
+  * Verify app.py and requirements.txt are in GitHub
+  * Make sure repository name is correct
+
+========================================
