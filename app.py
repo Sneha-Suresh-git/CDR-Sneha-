@@ -12,14 +12,6 @@ from collections import defaultdict
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Page configuration - MUST BE FIRST
-st.set_page_config(
-    page_title="CDR Analysis Pro",
-    page_icon="📡",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 def initialize_session_state():
     """Initialize session state variables"""
     if 'api_key' not in st.session_state:
@@ -496,6 +488,14 @@ def format_duration(seconds):
 
 # Main App
 def main():
+    # Page configuration - MUST BE FIRST
+    st.set_page_config(
+        page_title="CDR Analysis Pro",
+        page_icon="📡",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+    
     # Initialize session state
     initialize_session_state()
     
